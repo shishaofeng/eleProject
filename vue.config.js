@@ -4,5 +4,10 @@ const nodeEnv = process.env.nodeEnv;
 module.exports = {
   publicPath: "/",
   productionSourceMap: false,
-  outputDir: "./dist/eleProjet.js",
+  pages:{
+      index: {
+          entry:'src/main.js'
+      }
+  },
+  outputDir: "./dist",
 };

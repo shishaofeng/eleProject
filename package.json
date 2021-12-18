@@ -1,6 +1,6 @@
 {
   "name": "vue-ele-project",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -12,7 +12,7 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
     "vue": "^2.6.11",
-    "vue-ele-project": "^1.0.0"
+    "vue-ele-project": "^1.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -43,7 +43,7 @@
     "not dead"
   ],
   "description": "## Project setup ``` yarn install ```",
-  "main": "./dist/eleProjet.js",
+  "main": "./dist/eleProjet.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shishaofeng/eleProject.git"
@@ -53,5 +53,9 @@
   "bugs": {
     "url": "https://github.com/shishaofeng/eleProject/issues"
   },
-  "homepage": "https://github.com/shishaofeng/eleProject#readme"
+  "homepage": "https://github.com/shishaofeng/eleProject#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": []
 }
