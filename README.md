@@ -34,14 +34,14 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 ### buttonList 使用教程
+![avatar](src/assets/button.jpeg)
 ```
 main.js 引入 
-import vueEleProject from "vue-ele-project";
-Vue.use(vueEleProject);
+    import vueEleProject from "vue-ele-project";
+    Vue.use(vueEleProject);
 
-
- <buttonList :buttonList="buttonList" size="medium"></buttonList>
- data() {
+    <buttonList :buttonList="buttonList" size="medium"></buttonList>
+    data() {
     return {
       buttonList: [
         {
