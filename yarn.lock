@@ -6606,14 +6606,9 @@ prepend-http@^1.0.0:
   resolved "https://registry.nlark.com/prepend-http/download/prepend-http-1.0.4.tgz"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-"prettier@^1.18.2 || ^2.0.0":
+"prettier@^1.18.2 || ^2.0.0", prettier@^2.5.1:
   version "2.5.1"
   resolved "https://registry.npmmirror.com/prettier/download/prettier-2.5.1.tgz"
-  integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
-
-prettier@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.npmmirror.com/prettier/download/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
   integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
 
 pretty-error@^2.0.2:
@@ -8215,6 +8210,26 @@ vue-ele-project@^1.0.2:
     element-ui "^2.15.6"
     vue "^2.6.11"
     vue-ele-project "^1.0.1"
+
+vue-ele-project@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/vue-ele-project/-/vue-ele-project-1.0.4.tgz#c799c3daa2af8559fea14394731a7e10dc7d778d"
+  integrity sha512-TR0HsbaCZmMp1SAI6wtTK9p3DWq37cjPqxNgENlPCZ7cDkIIRlrpBt5Z+G0CAYypQeOVdAhiLsVwgQSsDcMLHQ==
+  dependencies:
+    core-js "^3.6.5"
+    element-ui "^2.15.6"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.2"
+
+vue-ele-project@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/vue-ele-project/-/vue-ele-project-1.0.5.tgz#df6a11f45f96dcae3722af976f506ceac46c988d"
+  integrity sha512-9k8tIP3wYfgTcTsCN6V9Jp3A8Hs5NzCwh4atSs/XOmXh6mlN7ZRphzheRcqvJVNe8fv6ENSxshEtHZXxtOAHZQ==
+  dependencies:
+    core-js "^3.6.5"
+    element-ui "^2.15.6"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.4"
 
 vue-eslint-parser@^7.0.0:
   version "7.11.0"
