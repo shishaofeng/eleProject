@@ -1,18 +1,30 @@
 <template>
   <div>
     <el-row>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      <el-button type="success">成功按钮</el-button>
-      <el-button type="info">信息按钮</el-button>
-      <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
+      <el-button
+        v-for="(item, index) in buttonList"
+        :key="index"
+        v-bind="item"
+        :size="size"
+        :style="{ color: item.color, border: `1px solid ${item.color}` }"
+        @click="item.click && item.click({item,index})"
+        >{{ item.name }}
+      </el-button>
     </el-row>
   </div>
 </template>
 <script>
-  export default {
-    name: "buttonList",
-  };
+export default {
+  name: 'buttonList',
+  props: {
+    size: String,
+    buttonList: {
+      type: Array,
+      default: () => {
+        return []
+      },
+    },
+  },
+}
 </script>
 <style scoped></style>

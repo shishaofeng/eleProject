@@ -5,9 +5,9 @@ module.exports = {
   publicPath: "/",
   productionSourceMap: false,
   pages:{
-      index: {
-          entry:'src/main.js'
-      }
+    index: {
+      entry:'src/main.js'
+    }
   },
   outputDir: "./dist",
 };
