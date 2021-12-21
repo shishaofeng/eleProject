@@ -1,6 +1,6 @@
 {
   "name": "vue-ele-project",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
