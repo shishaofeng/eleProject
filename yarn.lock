@@ -8231,6 +8231,16 @@ vue-ele-project@^1.0.5:
     vue "^2.6.11"
     vue-ele-project "^1.0.4"
 
+vue-ele-project@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.7.tgz#7273ea5a9902330c4c7afd5d1ce5236111d9850c"
+  integrity sha512-ZrbgrZTeAjF3jjR2BV8Pdwnprnrl5PQmSzint6SUFF6cx/DV2b5VU8Tj6aROxmAWVDzbQVRb1HfV0C4Aca5Yiw==
+  dependencies:
+    core-js "^3.6.5"
+    element-ui "^2.15.6"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.5"
+
 vue-eslint-parser@^7.0.0:
   version "7.11.0"
   resolved "https://registry.npmmirror.com/vue-eslint-parser/download/vue-eslint-parser-7.11.0.tgz"

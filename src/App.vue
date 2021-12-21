@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <el-form>
+    <el-form size="small" model="form">
       <img alt="Vue logo" src="./assets/logo.png" />
       <ButtonList :buttonList="buttonList" size="medium"></ButtonList>
-      <Table :data="tableData" :columns="columns" size="mini">
+      <Table
+        :data="tableData"
+        :columns="columns"
+        size="mini"
+        showIndex
+        showSelection
+        :cell-style="
+          () => {
+            return {
+              padding: '2px',
+            }
+          }
+        "
+      >
         <template v-slot:number="{ row }">
           <el-form-item>
-            <el-input v-model="row.number" size="small"></el-input>
+            <el-input v-model="row.number"></el-input>
           </el-form-item> </template
         ><template v-slot:month="{ row }">
           <el-form-item>
@@ -32,6 +45,7 @@ export default {
   },
   data() {
     return {
+      form: {},
       buttonList: [
         {
           name: '默认按钮',
