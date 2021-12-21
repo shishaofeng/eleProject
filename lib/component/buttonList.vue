@@ -7,7 +7,7 @@
         v-bind="item"
         :size="size"
         :style="{ color: item.color, border: `1px solid ${item.color}` }"
-        @click="item.click && item.click({item,index})"
+        @click="item.click && item.click({ item, index })"
         >{{ item.name }}
       </el-button>
     </el-row>
@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name: 'buttonList',
+  name: 'ButtonList',
   props: {
     size: String,
     buttonList: {
