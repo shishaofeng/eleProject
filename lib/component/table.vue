@@ -7,9 +7,10 @@
       fit
       style="width: 100%"
     >
-      <el-table-column v-if="showIndex" type="index" width="50">
+      <el-table-column v-if="showIndex" type="index" label="序号" width="50">
       </el-table-column>
-      <el-table-column v-if="showSelection" type="selection" width="55"> </el-table-column>
+      <el-table-column v-if="showSelection" type="selection" width="55">
+      </el-table-column>
 
       <slot></slot>
       <template slot="empty"> 暂无数据！ </template>
@@ -57,10 +58,7 @@ export default {
   data() {
     return {}
   },
-  methods: {
-   
-  },
-  
+  methods: {},
 }
 </script>
 

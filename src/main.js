@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 // Vue.use(vueEleProject);
-const localDebugging = true // 本地调试
+const localDebugging = true // 本地调试 远程调试组件可以设置为false
 if (localDebugging) {
   Vue.use(common)
 } else {
