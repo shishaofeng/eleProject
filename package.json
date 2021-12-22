@@ -12,7 +12,7 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
     "vue": "^2.6.11",
-    "vue-ele-project": "^1.0.8"
+    "vue-ele-project": "^1.0.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

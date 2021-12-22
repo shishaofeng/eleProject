@@ -8201,6 +8201,16 @@ vue-ele-project@^1.0.1:
     vue "^2.6.11"
     vue-ele-project "^1.0.1"
 
+vue-ele-project@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.10.tgz#60edb73a3d6180c883e5b2f743776e97a5a9780e"
+  integrity sha512-knzrYucPdWsHQLImluLWlgu7Tevf5a+Rg6E1MYh0OaLH2fX++C8iPt8asasOU+kojK6ItoScQvrlnQLXXxa11w==
+  dependencies:
+    core-js "^3.6.5"
+    element-ui "^2.15.6"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.8"
+
 vue-ele-project@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.2.tgz#70001c55f04ca9d7c32addd2c52d55e7c48d7823"
