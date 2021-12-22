@@ -14,6 +14,7 @@ if (localDebugging) {
   Vue.use(vueEleProject)
 }
 Vue.use(common)
+
 new Vue({
   render: (h) => h(App),
 }).$mount('#app')

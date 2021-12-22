@@ -1,79 +1,91 @@
 <template>
   <div id="app">
     <el-form size="small" :model="form">
+      <h1>
+        <a href="https://github.com/shishaofeng/eleProject/blob/main/README.md">
+          文档可以参考README.md</a
+        >
+      </h1>
       <img alt="Vue logo" src="./assets/logo.png" />
-      <ButtonList :buttonList="buttonList" size="medium"></ButtonList>
-      <Table
-        class="custom-table"
-        :data="tableData"
-        :columns="columns"
-        size="mini"
-        showIndex
-        showSelection
-        :header-cell-style="
-          () => {
-            return {
-              background: 'rgb(238, 239, 243)',
-              'text-align': 'center',
-              'font-size': '14px',
-              color: 'rgb(80, 80, 80)',
+      <div>
+        <h1>按钮组件展示</h1>
+        <ButtonList :buttonList="buttonList" size="medium"></ButtonList>
+      </div>
+      <div>
+        <h1>表格组件展示</h1>
+        <Table
+          class="custom-table"
+          :data="tableData"
+          :columns="columns"
+          size="mini"
+          showIndex
+          showSelection
+          :header-cell-style="
+            () => {
+              return {
+                background: 'rgb(238, 239, 243)',
+                'text-align': 'center',
+                'font-size': '14px',
+                color: 'rgb(80, 80, 80)',
+              }
             }
-          }
-        "
-        :cell-style="
-          () => {
-            return {
-              padding: '2px',
-              'text-align': 'center',
+          "
+          :cell-style="
+            () => {
+              return {
+                padding: '2px',
+                'text-align': 'center',
+              }
             }
-          }
-        "
-      >
-        <template v-slot:action="{ row, $index }">
-          <el-form-item>
-            <el-link
-              type="primary"
-              :underline="false"
-              @click="editRow(row, $index)"
-              >修改</el-link
-            >
-            &nbsp;&nbsp;
-            <el-link
-              type="primary"
-              :underline="false"
-              @click="deleteRow(row, $index)"
-              >删除</el-link
-            >
-          </el-form-item>
-        </template>
-        <template v-slot:number="{ row }">
-          <el-form-item>
-            <el-input v-model="row.number"></el-input>
-          </el-form-item>
-        </template>
-        <template v-slot:select="{ row }">
-          <el-form-item>
-            <el-select v-model="row.select" placeholder="请选择">
-              <el-option
-                v-for="item in selectOptions"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value"
+          "
+        >
+          <template v-slot:action="{ row, $index }">
+            <el-form-item>
+              <el-link
+                type="primary"
+                :underline="false"
+                @click="editRow(row, $index)"
+                >修改</el-link
               >
-              </el-option>
-            </el-select>
-          </el-form-item>
-        </template>
-        <template v-slot:cascader="{ row }">
-          <el-form-item>
-            <el-cascader
-              v-model="row.cascader"
-              :options="cascaderOptions"
-              @change="handleChange"
-            ></el-cascader>
-          </el-form-item>
-        </template> </Table
-    ></el-form>
+              &nbsp;&nbsp;
+              <el-link
+                type="primary"
+                :underline="false"
+                @click="deleteRow(row, $index)"
+                >删除</el-link
+              >
+            </el-form-item>
+          </template>
+          <template v-slot:number="{ row }">
+            <el-form-item>
+              <el-input v-model="row.number"></el-input>
+            </el-form-item>
+          </template>
+          <template v-slot:select="{ row }">
+            <el-form-item>
+              <el-select v-model="row.select" placeholder="请选择">
+                <el-option
+                  v-for="item in selectOptions"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                >
+                </el-option>
+              </el-select>
+            </el-form-item>
+          </template>
+          <template v-slot:cascader="{ row }">
+            <el-form-item>
+              <el-cascader
+                v-model="row.cascader"
+                :options="cascaderOptions"
+                @change="handleChange"
+              ></el-cascader>
+            </el-form-item>
+          </template>
+        </Table>
+      </div>
+    </el-form>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </template>
