@@ -8211,6 +8211,26 @@ vue-ele-project@^1.0.10:
     vue "^2.6.11"
     vue-ele-project "^1.0.8"
 
+vue-ele-project@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.11.tgz#7a8868deb8a801195cce74c2b7cbc4b7c0331fb9"
+  integrity sha512-N3eQIsTjfcM1VnSF6EIDUU8atB2tsN7LEvFQ1qMPq/PuiAaQGplnrZvAXqzxfi+KiPsTrGB1pok8qSnOPVdrDA==
+  dependencies:
+    core-js "^3.6.5"
+    element-ui "^2.15.6"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.10"
+
+vue-ele-project@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.12.tgz#ed17e233eaa97ad05e8f7ebf48fc20facd3f3f37"
+  integrity sha512-V9QuhGKsH6huEZMvENsqXkykYMzAtCteJqxLZawSJBhNpU5YZVd4CihUs3WGsU1O5nyAqTH2xbWLVOhlzNUQNg==
+  dependencies:
+    core-js "^3.6.5"
+    element-ui "^2.15.6"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.11"
+
 vue-ele-project@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.2.tgz#70001c55f04ca9d7c32addd2c52d55e7c48d7823"

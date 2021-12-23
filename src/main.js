@@ -6,14 +6,14 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-// Vue.use(vueEleProject);
-const localDebugging = true // 本地调试 远程调试组件可以设置为false
+const localDebugging = false // 本地调试 远程调试组件可以设置为false
 if (localDebugging) {
+  console.log('local components')
   Vue.use(common)
 } else {
+  console.log('npm node_modules components' + '...')
   Vue.use(vueEleProject)
 }
-Vue.use(common)
 
 new Vue({
   render: (h) => h(App),

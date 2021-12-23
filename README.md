@@ -42,7 +42,7 @@ main.js 引入
     Vue.use(vueEleProject);
 ```
 
-### buttonList 使用教程
+### buttonList 使用教程 按钮组件展示(支持element-ui的所有button属性)
 
 ![avatar](src/assets/button.jpeg)
 
@@ -101,7 +101,7 @@ main.js 引入
     },
 ```
 
-### Table 使用教程
+### Table 使用教程 表格组件展示(支持element-ui table的所有属性事件)
 
 ![avatar](src/assets/table.png)
 
@@ -214,4 +214,98 @@ main.js 引入
           ],
         }
       },
+```
+
+### Form 使用教程 表单组件展示(表单动态配置且支持自定义)
+![avatar](src/assets/form.png)
+```
+   <Form
+      class="custom-form"
+      :rules="formRules"
+      :model="form"
+      :form.sync="form"
+      label-width="140px"
+      :formList="formList"
+      size="small"
+      ref="form"
+      :columns="4"
+    >
+      <template v-slot:type="{}">
+        <!-- v-slot:type="{ label, defaultSlot } -->
+        <el-col :span="6">
+          <el-checkbox-group v-model="form.type">
+            <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+            <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+          </el-checkbox-group>
+        </el-col>
+      </template>
+      <template v-slot:custom="{}">
+        <!-- v-slot:type="{ label, defaultSlot } -->
+        <el-col :span="6">
+          <el-radio-group v-model="form.resource">
+            <el-radio label="线上品牌商赞助"></el-radio>
+          </el-radio-group>
+        </el-col>
+      </template>
+    </Form>
+    data() {
+      return {
+        form: {
+          name: '',
+          date1: '',
+          delivery: true,
+          type: [],
+          resource: '',
+        },
+        formList: [
+          { label: '活动名称哈哈哈', prop: 'name', type: 'input' },
+          {
+            label: '活动区域',
+            prop: 'region',
+            type: 'select',
+            selectObject: {
+              labelKey: 'label',
+              valueKey: 'value',
+              options: [
+                { label: '区域二', value: 'beijing' },
+                { label: '区域三', value: 'shanghai' },
+              ],
+            },
+          },
+          { label: '活动时间', prop: 'date1', type: 'date' },
+          { label: '即时配送', prop: 'delivery', type: 'switch' },
+          { defaultSlot: 'type', label: '活动类型' },
+          { defaultSlot: 'custom', label: '自定义列' },
+        ],
+        formRules: {
+          name: [
+            { required: true, message: '请输入活动名称', trigger: 'blur' },
+            { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' },
+          ],
+          region: [
+            { required: true, message: '请选择活动区域', trigger: 'change' },
+          ],
+          date1: [
+            {
+              type: 'date',
+              required: true,
+              message: '请选择日期',
+              trigger: 'change',
+            },
+          ],
+          type: [
+            {
+              type: 'array',
+              required: true,
+              message: '请至少选择一个活动性质',
+              trigger: 'change',
+            },
+          ],
+          resource: [
+            { required: true, message: '请选择活动资源', trigger: 'change' },
+          ],
+          desc: [{ required: true, message: '请填写活动形式', trigger: 'blur' }],
+        },
+    }
+  },
 ```
