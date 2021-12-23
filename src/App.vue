@@ -8,11 +8,11 @@
       </h1>
       <img alt="Vue logo" src="./assets/logo.png" />
       <div>
-        <h1>按钮组件展示</h1>
+        <h1>按钮组件展示(支持element-ui的所有button属性)</h1>
         <ButtonList :buttonList="buttonList" size="medium"></ButtonList>
       </div>
       <div>
-        <h1>表格组件展示</h1>
+        <h1>表格组件展示(支持element-ui table的所有属性事件)</h1>
         <Table
           class="custom-table"
           :data="tableData"
@@ -79,7 +79,7 @@
               <el-cascader
                 v-model="row.cascader"
                 :options="cascaderOptions"
-                @change="handleChange"
+                @change="handleCascaderChange"
               ></el-cascader>
             </el-form-item>
           </template>
@@ -87,6 +87,35 @@
       </div>
     </el-form>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <h1>表单组件展示(表单动态配置且支持自定义)</h1>
+    <Form
+      class="custom-form"
+      :rules="formRules"
+      :model.sync="form"
+      label-width="140px"
+      :formList="formList"
+      size="small"
+      ref="form"
+      :columns="4"
+    >
+      <template v-slot:type="{}">
+        <!-- v-slot:type="{ label, defaultSlot } -->
+        <el-col :span="6">
+          <el-checkbox-group v-model="form.type">
+            <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+            <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+          </el-checkbox-group>
+        </el-col>
+      </template>
+      <template v-slot:custom="{}">
+        <!-- v-slot:type="{ label, defaultSlot } -->
+        <el-col :span="6">
+          <el-radio-group v-model="form.resource">
+            <el-radio label="线上品牌商赞助"></el-radio>
+          </el-radio-group>
+        </el-col>
+      </template>
+    </Form>
   </div>
 </template>
 
@@ -99,7 +128,6 @@ export default {
   },
   data() {
     return {
-      form: {},
       cascaderOptions: [
         {
           value: 'zhinan',
@@ -424,9 +452,68 @@ export default {
           address: '上海市普陀区金沙江路 1516 弄',
         },
       ],
+      form: {
+        name: '',
+        date1: '',
+        delivery: true,
+        type: [],
+        resource: '',
+      },
+      formList: [
+        { label: '活动名称哈哈哈', prop: 'name', type: 'input' },
+        {
+          label: '活动区域',
+          prop: 'region',
+          type: 'select',
+          selectObject: {
+            labelKey: 'label',
+            valueKey: 'value',
+            options: [
+              { label: '区域二', value: 'beijing' },
+              { label: '区域三', value: 'shanghai' },
+            ],
+          },
+        },
+        { label: '活动时间', prop: 'date1', type: 'date' },
+        { label: '即时配送', prop: 'delivery', type: 'switch' },
+        { defaultSlot: 'type', label: '活动类型' },
+        { defaultSlot: 'custom', label: '自定义列' },
+      ],
+      formRules: {
+        name: [
+          { required: true, message: '请输入活动名称', trigger: 'blur' },
+          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' },
+        ],
+        region: [
+          { required: true, message: '请选择活动区域', trigger: 'change' },
+        ],
+        date1: [
+          {
+            type: 'date',
+            required: true,
+            message: '请选择日期',
+            trigger: 'change',
+          },
+        ],
+        type: [
+          {
+            type: 'array',
+            required: true,
+            message: '请至少选择一个活动性质',
+            trigger: 'change',
+          },
+        ],
+        resource: [
+          { required: true, message: '请选择活动资源', trigger: 'change' },
+        ],
+        desc: [{ required: true, message: '请填写活动形式', trigger: 'blur' }],
+      },
     }
   },
   methods: {
+    handleCascaderChange(val) {
+      console.log(val)
+    },
     editRow(row, index) {
       console.log(row, index)
     },
@@ -453,5 +540,13 @@ export default {
 td .el-form-item--mini.el-form-item,
 td .el-form-item--small.el-form-item {
   margin: 3px 5px;
+}
+
+.el-select {
+  width: 100%;
+}
+
+.no-left .el-form-item--small .el-form-item__error {
+  width: max-content;
 }
 </style>
