@@ -91,7 +91,8 @@
     <Form
       class="custom-form"
       :rules="formRules"
-      :model.sync="form"
+      :model="form"
+      :form.sync="form"
       label-width="140px"
       :formList="formList"
       size="small"

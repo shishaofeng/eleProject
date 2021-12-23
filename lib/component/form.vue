@@ -68,7 +68,7 @@ export default {
         return []
       },
     },
-    model: {
+    form: {
       type: Object,
       default: () => {
         return {}
@@ -87,7 +87,7 @@ export default {
     }
   },
   watch: {
-    model: {
+    form: {
       handler(val) {
         this.formData = val
       },
@@ -97,7 +97,7 @@ export default {
 
     formData: {
       handler(val) {
-        this.$emit('update:model', val)
+        this.$emit('update:form', val)
       },
       deep: true,
       immediate: true,
