@@ -83,18 +83,10 @@ export default {
   },
   data() {
     return {
-      formData: {},
+      formData: JSON.parse(JSON.stringify(this.form)),
     }
   },
   watch: {
-    form: {
-      handler(val) {
-        this.formData = val
-      },
-      deep: true,
-      immediate: true,
-    },
-
     formData: {
       handler(val) {
         this.$emit('update:form', val)
