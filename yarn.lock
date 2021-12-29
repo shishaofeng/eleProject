@@ -8233,7 +8233,7 @@ vue-ele-project@^1.0.12:
 
 vue-ele-project@^1.0.13:
   version "1.0.13"
-  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.13.tgz#793b1baaed1d395dd91c715dc58b79723e36e8c3"
+  resolved "https://registry.npmmirror.com/vue-ele-project/download/vue-ele-project-1.0.13.tgz#793b1baaed1d395dd91c715dc58b79723e36e8c3"
   integrity sha512-uA2iPFGHNzRziqmrfQpOWX4/dInY+ebLKzByo4uwn2QYnKGiZPlZLcfkRIlBPlfIkOv2KqddVTSqRDrruLXFkA==
   dependencies:
     core-js "^3.6.5"
