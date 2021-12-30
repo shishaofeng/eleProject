@@ -2,7 +2,7 @@
 // const webpack = require("webpack");
 // const nodeEnv = process.env.nodeEnv;
 module.exports = {
-  publicPath: "/",
+  publicPath: "./",
   productionSourceMap: false,
   pages:{
     index: {
@@ -10,4 +10,5 @@ module.exports = {
     }
   },
   outputDir: "./dist",
+  
 };
