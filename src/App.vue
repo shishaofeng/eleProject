@@ -511,6 +511,15 @@ export default {
       },
     }
   },
+  mounted() {
+    this.$request({
+      url: 'api/get/news',
+      methods: 'get',
+      params: {},
+    }).then(({ data }) => {
+      console.log(data, '---ddd')
+    })
+  },
   methods: {
     handleCascaderChange(val) {
       console.log(val)

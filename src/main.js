@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import common from '../lib/index'
+import request from '@/utils/request'
 import vueEleProject from 'vue-ele-project'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -18,7 +19,7 @@ if (localDebugging) {
   console.log('npm node_modules components' + '...')
   Vue.use(vueEleProject)
 }
-
+Vue.prototype.$request = request
 new Vue({
   render: (h) => h(App),
 }).$mount('#app')

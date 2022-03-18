@@ -15,6 +15,16 @@ const type = Mock.mock({
 })
 export default [
   {
+    rurl: 'api/get/news',
+    rtype: 'get',
+    template: () => {
+      return {
+        code: 200,
+        data: '3333333333',
+      }
+    },
+  },
+  {
     rurl: '/sit-api/api-wms-apply/api/labor/manually/voucher/search/list',
     rtype: 'post',
     template: () => {

@@ -9,6 +9,7 @@
     "lib": "vue-cli-service build --target lib --name eleProjet lib/index.js"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
     "mockjs": "^1.1.0",
