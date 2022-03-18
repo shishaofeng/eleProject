@@ -43,7 +43,7 @@ context
     .keys()
     .filter(item => item !== './index.js' && !_.startsWith(item, './_'))
     .forEach(key => {
-        const namespace = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'))
+        // const namespace = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'))
         const options = context(key).default
         if (_.isArray(options)) {
             _.forEach(options, option => generatorMock(option))
