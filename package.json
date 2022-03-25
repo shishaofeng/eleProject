@@ -1,6 +1,6 @@
 {
   "name": "vue-ele-project",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -15,7 +15,7 @@
     "element-ui": "^2.15.6",
     "mockjs": "^1.1.0",
     "vue": "^2.6.11",
-    "vue-ele-project": "^1.0.18"
+    "vue-ele-project": "^1.0.19"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

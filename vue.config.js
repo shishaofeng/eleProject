@@ -9,5 +9,5 @@ module.exports = {
       entry: 'src/main.js',
     },
   },
-  outputDir: './lib',
+  outputDir: './dist',
 }
