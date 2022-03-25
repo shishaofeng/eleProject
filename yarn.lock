@@ -8230,6 +8230,58 @@ vue-ele-project@^1.0.12, vue-ele-project@^1.0.13:
     vue "^2.6.11"
     vue-ele-project "^1.0.12"
 
+vue-ele-project@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.15.tgz#5f6c4389de415b079b27a4ad67ffc64e7c3c7dc2"
+  integrity sha512-Otjzw8di6EEo+oJvB/LMavtcSwNlS5I/tBJ63+jsWPsmo/shHxkn3U4dksJ2YUe30UkdEEnwIxPt6bhrA6fVrg==
+  dependencies:
+    axios "^0.26.1"
+    core-js "^3.6.5"
+    decimal.js "^10.3.1"
+    element-ui "^2.15.6"
+    mockjs "^1.1.0"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.13"
+
+vue-ele-project@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.16.tgz#393c930a13f47204228cd9a168e33a960fa4b12f"
+  integrity sha512-oO8BeDIYCyMKAkzvpiy0EDlz77a0wjIJ418yGtqWiFesJvUluxEIIQ2PdH7HWccD+30YHrXeP8BDM98uzlhx/w==
+  dependencies:
+    axios "^0.26.1"
+    core-js "^3.6.5"
+    decimal.js "^10.3.1"
+    element-ui "^2.15.6"
+    mockjs "^1.1.0"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.15"
+
+vue-ele-project@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.17.tgz#ec3d6096c4989e75e907d00002ee2b841e0325d0"
+  integrity sha512-H90o7FnL94q3zjeipse+n8upphspXRODi55PzkgzVPYkfC0cbwsJDat5T6LLUTLzo2awIq6HHw42YRSTCexdSw==
+  dependencies:
+    axios "^0.26.1"
+    core-js "^3.6.5"
+    decimal.js "^10.3.1"
+    element-ui "^2.15.6"
+    mockjs "^1.1.0"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.16"
+
+vue-ele-project@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/vue-ele-project/-/vue-ele-project-1.0.18.tgz#f4b5e4c919996b842f09b09b98a9099f9fd40bc4"
+  integrity sha512-OU3NegcdkXwZCkQvPgGvity8yYqVXeMMYx8oI7wV6pAboHSi6tVdXLxFB7vuNuyEJU533Us8TrHp3haU6/5vwQ==
+  dependencies:
+    axios "^0.26.1"
+    core-js "^3.6.5"
+    decimal.js "^10.3.1"
+    element-ui "^2.15.6"
+    mockjs "^1.1.0"
+    vue "^2.6.11"
+    vue-ele-project "^1.0.17"
+
 vue-eslint-parser@^7.0.0:
   version "7.11.0"
   resolved "https://registry.npmmirror.com/vue-eslint-parser/download/vue-eslint-parser-7.11.0.tgz"

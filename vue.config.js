@@ -1,14 +1,13 @@
-// const path = require("path");
+const path = require('path')
 // const webpack = require("webpack");
 // const nodeEnv = process.env.nodeEnv;
 module.exports = {
-  publicPath: "./",
+  publicPath: './',
   productionSourceMap: false,
-  pages:{
+  pages: {
     index: {
-      entry:'src/main.js'
-    }
+      entry: 'src/main.js',
+    },
   },
-  outputDir: "./dist",
-  
-};
+  outputDir: './lib',
+}
