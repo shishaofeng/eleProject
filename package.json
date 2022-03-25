@@ -1,6 +1,6 @@
 {
   "name": "vue-ele-project",
-  "version": "1.0.14",
+  "version": "1.0.13",
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -47,7 +47,7 @@
     "not dead"
   ],
   "description": "## Project setup ``` yarn install ```",
-  "main": "./lib/index.js",
+  "main": "./lib/index.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shishaofeng/eleProject.git"
