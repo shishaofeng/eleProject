@@ -1,12 +1,10 @@
-const path = require('path')
-const webpack = require('webpack'); //访问内置的插件
+const { resolve } = require('path')
+const webpack = require('webpack') //访问内置的插件
 // 开启gZip压缩
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 // 提取css
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
-//定义开发环境的Boolean
-// const nodeEnv = process.env.nodeEnv;
 module.exports = {
   publicPath: './',
   productionSourceMap: false,
@@ -15,7 +13,7 @@ module.exports = {
       entry: 'src/main.js',
     },
   },
-  outputDir: path.resolve(__dirname, './dist'), //配置开发环境相关的  可以添加proxy属性 配置跨域代理
+  outputDir: resolve(__dirname, './dist'), //配置开发环境相关的  可以添加proxy属性 配置跨域代理
   devServer: {
     //是否开启热更新
     hot: true, //本地启动地址
@@ -36,21 +34,10 @@ module.exports = {
   },
   // 如果是生产环境 则使用生产环境的 source map
   productionSourceMap: !IS_PROD,
-  // configureWebpack: {
-  //   plugins: [new MiniCssExtractPlugin()],
-  //   module: {
-  //     rules: [
-  //       {
-  //         test: /\.css$/i,
-  //         use: [MiniCssExtractPlugin.loader, 'css-loader'],
-  //       },
-  //     ],
-  //   },
-  // },
   css: {
     extract: true,
   },
-  // vue.config.js
+  // 链式调用
   chainWebpack: (config) => {
     config.name = config.name
     const plugins = []
@@ -98,7 +85,20 @@ module.exports = {
           },
         },
       })
-      // 添加API
+      // 设置文件路径别名
+      config.resolve.alias.set('@', resolve('src'))
+      // 设置module
+      // set preserveWhitespace
+      config.module
+        .rule('vue')
+        .use('vue-loader')
+        .loader('vue-loader')
+        .tap((options) => {
+          options.compilerOptions.preserveWhitespace = true
+          return options
+        })
+        .end()
+      // 添加plugin
       config.plugin('zip').use(CompressionWebpackPlugin, [
         {
           test: /\.(js|css|json|ico|svg)$/, // 匹配文件格式
@@ -107,6 +107,14 @@ module.exports = {
           minRatio: 0.8, // 压缩比
           filename: '[path][base].gz', // 压缩后的文件名，默认值是 [path][base].gz
           deleteOriginalAssets: false, // 不删除源文件，true 则只保留压缩后的文件
+        },
+      ])
+      config.plugin('MiniCssExtractPlugin').use(MiniCssExtractPlugin, [
+        {
+          // 类似于 webpackOptions.output 中的选项
+          // 所有选项都是可选的
+          filename: 'css/[name].[contenthash].css',
+          chunkFilename: 'css/[id].[contenthash].css',
         },
       ])
     }
